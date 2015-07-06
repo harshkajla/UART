@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Apr 12 22:46:38 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "DATA<0>" LOCATE = SITE "E4" LEVEL 1;
+COMP "DATA<1>" LOCATE = SITE "T5" LEVEL 1;
+COMP "DATA<2>" LOCATE = SITE "R5" LEVEL 1;
+COMP "DATA<3>" LOCATE = SITE "P12" LEVEL 1;
+COMP "DATA<4>" LOCATE = SITE "P15" LEVEL 1;
+COMP "DATA<5>" LOCATE = SITE "C14" LEVEL 1;
+COMP "DATA<6>" LOCATE = SITE "D14" LEVEL 1;
+COMP "DATA<7>" LOCATE = SITE "A10" LEVEL 1;
+COMP "SWITCH" LOCATE = SITE "F5" LEVEL 1;
+COMP "TRANSMISSION_PORT" LOCATE = SITE "A16" LEVEL 1;
+COMP "CLK" LOCATE = SITE "L15" LEVEL 1;
+SCHEMATIC END;
+

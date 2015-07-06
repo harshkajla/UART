@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf
+
+Design file:              TOP.ncd
+Physical constraint file: TOP.pcf
+Device,package,speed:     xc6slx45,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock SYS_CLK
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RX          |    3.874(R)|      SLOW  |   -0.805(R)|      SLOW  |SYS_CLK_BUFGP     |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock RST to Pad
+------------+-----------------+------------+-----------------+------------+------------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                              | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)             | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------------------+--------+
+RX_DATA<0>  |        13.279(F)|      SLOW  |         7.933(F)|      FAST  |Receiver/rst_GND_10_o_AND_36_o|   0.000|
+RX_DATA<1>  |        13.279(F)|      SLOW  |         7.933(F)|      FAST  |Receiver/rst_GND_10_o_AND_36_o|   0.000|
+RX_DATA<2>  |        13.366(F)|      SLOW  |         8.027(F)|      FAST  |Receiver/rst_GND_10_o_AND_36_o|   0.000|
+RX_DATA<3>  |        13.366(F)|      SLOW  |         8.027(F)|      FAST  |Receiver/rst_GND_10_o_AND_36_o|   0.000|
+RX_DATA<4>  |        13.039(F)|      SLOW  |         7.809(F)|      FAST  |Receiver/rst_GND_10_o_AND_36_o|   0.000|
+RX_DATA<5>  |        13.039(F)|      SLOW  |         7.809(F)|      FAST  |Receiver/rst_GND_10_o_AND_36_o|   0.000|
+RX_DATA<6>  |        12.938(F)|      SLOW  |         7.772(F)|      FAST  |Receiver/rst_GND_10_o_AND_36_o|   0.000|
+RX_DATA<7>  |        12.938(F)|      SLOW  |         7.772(F)|      FAST  |Receiver/rst_GND_10_o_AND_36_o|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------------------+--------+
+
+Clock to Setup on destination clock RST
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+RST            |    4.644|         |         |    2.068|
+SYS_CLK        |    5.947|         |    4.152|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SYS_CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+RST            |    6.442|    6.442|         |         |
+SYS_CLK        |    3.877|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Thu Apr 23 20:24:01 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 290 MB
+
+
+

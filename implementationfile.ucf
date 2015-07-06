@@ -1,0 +1,26 @@
+net sys_clk loc="L15";
+net rst loc = "n4";
+net rx loc="b16";
+net tx loc ="a16";
+net tx_data<0> loc = "e4";
+net tx_data<1> loc = "t5";
+net tx_data<2> loc = "r5";
+net tx_data<3> loc = "p12";
+net tx_data<4> loc = "p15";
+net tx_data<5> loc = "c14";
+net tx_data<6> loc = "d14";
+net tx_data<7> loc = "a10";
+
+net tx_data_valid loc = "f6";
+
+net rx_data<0> loc = "n12";
+net rx_data<1> loc = "p16";
+net rx_data<2> loc = "d4";
+net rx_data<3> loc = "m13";
+net rx_data<4> loc = "l14";
+net rx_data<5> loc = "n14";
+net rx_data<6> loc = "m14";
+net rx_data<7> loc = "u18";
+
+net rx_valid loc = "p3";
+

@@ -1,0 +1,31 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Anmol/Desktop/UART_v2/UART/top_testbench_isim_beh.exe -prj C:/Users/Anmol/Desktop/UART_v2/UART/top_testbench_beh.prj work.top_testbench 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Anmol/Desktop/UART_v2/UART/debounce.vhd" into library work
+Parsing VHDL file "C:/Users/Anmol/Desktop/UART_v2/UART/tx_uart.vhd" into library work
+Parsing VHDL file "C:/Users/Anmol/Desktop/UART_v2/UART/rx_uart.vhd" into library work
+Parsing VHDL file "C:/Users/Anmol/Desktop/UART_v2/UART/clock_gen.vhd" into library work
+Parsing VHDL file "C:/Users/Anmol/Desktop/UART_v2/UART/TOP.vhd" into library work
+Parsing VHDL file "C:/Users/Anmol/Desktop/UART_v2/UART/top_testbench.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavioral of entity CLOCK_GEN [clock_gen_default]
+Compiling architecture behavioral of entity debounce [debounce_default]
+Compiling architecture behavorial of entity TX_UART [tx_uart_default]
+Compiling architecture behavioral of entity rx_uart [rx_uart_default]
+Compiling architecture behavioral of entity TOP [top_default]
+Compiling architecture behavior of entity top_testbench
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\top_testbench_isim_beh.exe.sim\libPortability.dll".
+Compiled 16 VHDL Units
+Built simulation executable C:/Users/Anmol/Desktop/UART_v2/UART/top_testbench_isim_beh.exe
+Fuse Memory Usage: 35288 KB
+Fuse CPU Usage: 2296 ms

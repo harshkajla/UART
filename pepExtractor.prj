@@ -1,0 +1,4 @@
+work	"TOP.vhd"
+work	"clock_gen.vhd"
+work	"debounce.vhd"
+work	"tx_uart.vhd"

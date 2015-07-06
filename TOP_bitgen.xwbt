@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Anmol\Desktop\UART_v2\UART\TOP.ncd
+OUTFILE=C:\Users\Anmol\Desktop\UART_v2\UART\TOP.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=C:\Users\Anmol\Desktop\UART_v2\UART
+LICENSE=WebPack
+USER_INFO=211002303_0_0_253

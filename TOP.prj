@@ -1,0 +1,5 @@
+vhdl work "debounce.vhd"
+vhdl work "tx_uart.vhd"
+vhdl work "rx_uart.vhd"
+vhdl work "clock_gen.vhd"
+vhdl work "TOP.vhd"

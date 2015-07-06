@@ -1,0 +1,29 @@
+Command line:
+   rx_uart_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  20862
+
+Thu Apr 23 18:50:48 2015
+
+
+ Elaboration Time: 0.21875 sec
+
+ Current Memory Usage: 361.66 Meg
+
+ Total Signals          : 11
+ Total Nets             : 44
+ Total Signal Drivers   : 8
+ Total Blocks           : 5
+ Total Primitive Blocks : 5
+ Total Processes        : 2
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 545
+Total Line Count : 28
+
+ Total Simulation Time: 0.25 sec
+
+ Current Memory Usage: 361.66 Meg
+
+Thu Apr 23 18:54:57 2015
+

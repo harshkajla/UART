@@ -1,0 +1,6 @@
+vhdl isim_temp "debounce.vhd"
+vhdl isim_temp "tx_uart.vhd"
+vhdl isim_temp "rx_uart.vhd"
+vhdl isim_temp "clock_gen.vhd"
+vhdl isim_temp "TOP.vhd"
+vhdl isim_temp "top_testbench.vhd"

@@ -1,0 +1,776 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.51 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.53 secs
+ 
+--> Reading design: TOP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg324
+
+---- Source Options
+Top Module Name                    : TOP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Anmol\Desktop\UART_v2\UART\debounce.vhd" into library work
+Parsing entity <debounce>.
+Parsing architecture <Behavioral> of entity <debounce>.
+Parsing VHDL file "C:\Users\Anmol\Desktop\UART_v2\UART\tx_uart.vhd" into library work
+Parsing entity <TX_UART>.
+Parsing architecture <Behavorial> of entity <tx_uart>.
+Parsing VHDL file "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" into library work
+Parsing entity <rx_uart>.
+Parsing architecture <Behavioral> of entity <rx_uart>.
+Parsing VHDL file "C:\Users\Anmol\Desktop\UART_v2\UART\clock_gen.vhd" into library work
+Parsing entity <CLOCK_GEN>.
+Parsing architecture <Behavioral> of entity <clock_gen>.
+Parsing VHDL file "C:\Users\Anmol\Desktop\UART_v2\UART\TOP.vhd" into library work
+Parsing entity <TOP>.
+Parsing architecture <Behavioral> of entity <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <TOP> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CLOCK_GEN> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <TX_UART> (architecture <Behavorial>) from library <work>.
+
+Elaborating entity <debounce> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\debounce.vhd" Line 100: temp should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\tx_uart.vhd" Line 74: out_signal should be on the sensitivity list of the process
+
+Elaborating entity <rx_uart> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 60: rst should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 63: rns should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 64: rps should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 68: sample should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 74: rx_bit_count should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 75: sample should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 76: tmp_tx should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 78: rx_bit_count should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 80: tmp_tx should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 82: tmp_tx should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TOP>.
+    Related source file is "C:\Users\Anmol\Desktop\UART_v2\UART\TOP.vhd".
+WARNING:Xst:647 - Input <RX_VALID> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <TOP> synthesized.
+
+Synthesizing Unit <CLOCK_GEN>.
+    Related source file is "C:\Users\Anmol\Desktop\UART_v2\UART\clock_gen.vhd".
+    Found 1-bit register for signal <temp>.
+    Found 1-bit register for signal <baud>.
+    Found 13-bit register for signal <counter>.
+    Found 13-bit adder for signal <counter[12]_GND_6_o_add_1_OUT> created at line 22.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  15 D-type flip-flop(s).
+Unit <CLOCK_GEN> synthesized.
+
+Synthesizing Unit <TX_UART>.
+    Related source file is "C:\Users\Anmol\Desktop\UART_v2\UART\tx_uart.vhd".
+WARNING:Xst:647 - Input <sys_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <TX_NS>.
+    Found 10-bit register for signal <DATAFLL>.
+    Found 1-bit register for signal <out_signal>.
+    Found 4-bit register for signal <index>.
+    Found 1-bit register for signal <TX_PS>.
+    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_4_OUT<3:0>> created at line 65.
+    Found 1-bit 10-to-1 multiplexer for signal <index[3]_X_8_o_Mux_1_o> created at line 63.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <TX_UART> synthesized.
+
+Synthesizing Unit <debounce>.
+    Related source file is "C:\Users\Anmol\Desktop\UART_v2\UART\debounce.vhd".
+    Found 1-bit register for signal <temp>.
+    Found 7-bit register for signal <count1>.
+    Found 2-bit register for signal <SWITCH_NEXT>.
+    Found 2-bit register for signal <SWITCH_PRES>.
+    Found 7-bit adder for signal <count1[6]_GND_9_o_add_1_OUT> created at line 74.
+    Found 1-bit 3-to-1 multiplexer for signal <SWITCH_PRES[1]_X_9_o_Mux_9_o> created at line 57.
+    Found 7-bit 3-to-1 multiplexer for signal <SWITCH_PRES[1]_X_9_o_wide_mux_10_OUT> created at line 57.
+    Found 2-bit 3-to-1 multiplexer for signal <SWITCH_PRES[1]_X_9_o_wide_mux_11_OUT> created at line 57.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred  13 Multiplexer(s).
+Unit <debounce> synthesized.
+
+Synthesizing Unit <rx_uart>.
+    Related source file is "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd".
+    Found 9-bit register for signal <count>.
+    Found 5-bit register for signal <sampling_count>.
+    Found 5-bit register for signal <sample>.
+    Found 9-bit adder for signal <count[8]_GND_10_o_add_0_OUT> created at line 40.
+    Found 5-bit adder for signal <sampling_count[4]_GND_10_o_add_3_OUT> created at line 47.
+    Found 5-bit adder for signal <sample[4]_GND_10_o_add_4_OUT> created at line 49.
+    Found 4-bit adder for signal <rx_bit_count[3]_GND_10_o_add_18_OUT> created at line 74.
+WARNING:Xst:737 - Found 1-bit latch for signal <RPS>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <RNS>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_tx<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_tx<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_tx<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_tx<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_tx<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_tx<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_tx<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_tx<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_data<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_data<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_data<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_data<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_data<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_data<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_data<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_data<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_bit_count<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_bit_count<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_bit_count<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rx_bit_count<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 5-bit comparator greater for signal <sample[4]_GND_10_o_LessThan_20_o> created at line 75
+    Found 4-bit comparator greater for signal <GND_10_o_rx_bit_count[3]_LessThan_21_o> created at line 78
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred  22 Latch(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <rx_uart> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 13-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 2
+ 7-bit adder                                           : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 15
+ 1-bit register                                        : 6
+ 10-bit register                                       : 1
+ 13-bit register                                       : 1
+ 2-bit register                                        : 2
+ 4-bit register                                        : 1
+ 5-bit register                                        : 2
+ 7-bit register                                        : 1
+ 9-bit register                                        : 1
+# Latches                                              : 22
+ 1-bit latch                                           : 22
+# Comparators                                          : 2
+ 4-bit comparator greater                              : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 19
+ 1-bit 10-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 7
+ 1-bit 3-to-1 multiplexer                              : 1
+ 2-bit 2-to-1 multiplexer                              : 3
+ 2-bit 3-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 3
+ 7-bit 3-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch DATAFLL_0 hinder the constant cleaning in the block Transmitter.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <DATAFLL_9> has a constant value of 0 in block <Transmitter>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <CLOCK_GEN>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <CLOCK_GEN> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TX_UART>.
+The following registers are absorbed into counter <index>: 1 register on signal <index>.
+Unit <TX_UART> synthesized (advanced).
+
+Synthesizing (advanced) Unit <rx_uart>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <sampling_count>: 1 register on signal <sampling_count>.
+The following registers are absorbed into counter <sample>: 1 register on signal <sample>.
+Unit <rx_uart> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 5
+ 13-bit up counter                                     : 1
+ 4-bit down counter                                    : 1
+ 5-bit up counter                                      : 2
+ 9-bit up counter                                      : 1
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+# Comparators                                          : 2
+ 4-bit comparator greater                              : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 16
+ 1-bit 10-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 3-to-1 multiplexer                              : 1
+ 2-bit 2-to-1 multiplexer                              : 3
+ 2-bit 3-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 3
+ 7-bit 3-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch DATAFLL_0 hinder the constant cleaning in the block TX_UART.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <DATAFLL_9> has a constant value of 0 in block <TX_UART>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <count1_2> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <count1_3> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <count1_4> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <count1_5> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <count1_6> of sequential type is unconnected in block <debounce>.
+
+Optimizing unit <TOP> ...
+
+Optimizing unit <TX_UART> ...
+
+Optimizing unit <debounce> ...
+
+Optimizing unit <rx_uart> ...
+WARNING:Xst:1293 - FF/Latch <clock1/counter_12> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 56
+ Flip-Flops                                            : 56
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TOP.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 130
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 16
+#      LUT2                        : 8
+#      LUT3                        : 18
+#      LUT4                        : 10
+#      LUT5                        : 11
+#      LUT6                        : 20
+#      MUXCY                       : 19
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 21
+# FlipFlops/Latches                : 78
+#      FD                          : 29
+#      FDC                         : 9
+#      FDCE                        : 5
+#      FDE                         : 9
+#      FDRE                        : 2
+#      FDSE                        : 2
+#      LD                          : 16
+#      LD_1                        : 1
+#      LDC                         : 4
+#      LDE_1                       : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 11
+#      OBUF                        : 9
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              70  out of  54576     0%  
+ Number of Slice LUTs:                   87  out of  27288     0%  
+    Number used as Logic:                87  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    104
+   Number with an unused Flip Flop:      34  out of    104    32%  
+   Number with an unused LUT:            17  out of    104    16%  
+   Number of fully used LUT-FF pairs:    53  out of    104    50%  
+   Number of unique control sets:        11
+
+IO Utilization: 
+ Number of IOs:                          22
+ Number of bonded IOBs:                  21  out of    218     9%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------------------------------------------+---------------------------------+-------+
+Clock Signal                                                                                        | Clock buffer(FF name)           | Load  |
+----------------------------------------------------------------------------------------------------+---------------------------------+-------+
+SYS_CLK                                                                                             | BUFGP                           | 33    |
+clock1/baud                                                                                         | BUFG                            | 23    |
+Receiver/rst_GND_10_o_AND_36_o(Receiver/rst_GND_10_o_AND_36_o1:O)                                   | NONE(*)(Receiver/rx_data_7)     | 8     |
+Receiver/rst_GND_10_o_AND_11_o(Receiver/rst_GND_10_o_AND_11_o1:O)                                   | NONE(*)(Receiver/tmp_tx_7)      | 8     |
+Receiver/sampling_count[4]_PWR_11_o_equal_18_o(Receiver/sampling_count[4]_PWR_11_o_equal_18_o<4>1:O)| NONE(*)(Receiver/rx_bit_count_3)| 4     |
+RST                                                                                                 | IBUF+BUFG                       | 2     |
+----------------------------------------------------------------------------------------------------+---------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.651ns (Maximum Frequency: 273.905MHz)
+   Minimum input arrival time before clock: 4.925ns
+   Maximum output required time after clock: 3.668ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SYS_CLK'
+  Clock period: 3.651ns (frequency: 273.905MHz)
+  Total number of paths / destination ports: 715 / 38
+-------------------------------------------------------------------------
+Delay:               3.651ns (Levels of Logic = 3)
+  Source:            Receiver/count_4 (FF)
+  Destination:       Receiver/sample_4 (FF)
+  Source Clock:      SYS_CLK rising
+  Destination Clock: SYS_CLK rising
+
+  Data Path: Receiver/count_4 to Receiver/sample_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.447   0.898  Receiver/count_4 (Receiver/count_4)
+     LUT4:I0->O            7   0.203   0.774  Receiver/count[8]_PWR_11_o_equal_2_o<8>_SW0 (N3)
+     LUT6:I5->O            5   0.205   0.819  Receiver/count[8]_PWR_11_o_equal_2_o<8> (Receiver/count[8]_PWR_11_o_equal_2_o)
+     LUT4:I2->O            1   0.203   0.000  Receiver/sample_4_rstpot (Receiver/sample_4_rstpot)
+     FD:D                      0.102          Receiver/sample_4
+    ----------------------------------------
+    Total                      3.651ns (1.160ns logic, 2.491ns route)
+                                       (31.8% logic, 68.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock1/baud'
+  Clock period: 2.867ns (frequency: 348.857MHz)
+  Total number of paths / destination ports: 109 / 31
+-------------------------------------------------------------------------
+Delay:               2.867ns (Levels of Logic = 1)
+  Source:            Transmitter/TX_PS (FF)
+  Destination:       Transmitter/index_3 (FF)
+  Source Clock:      clock1/baud rising
+  Destination Clock: clock1/baud rising
+
+  Data Path: Transmitter/TX_PS to Transmitter/index_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              10   0.447   1.104  Transmitter/TX_PS (Transmitter/TX_PS)
+     LUT5:I1->O            4   0.203   0.683  Transmitter/_n00401 (Transmitter/_n0040)
+     FDSE:S                    0.430          Transmitter/index_0
+    ----------------------------------------
+    Total                      2.867ns (1.080ns logic, 1.786ns route)
+                                       (37.7% logic, 62.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Receiver/rst_GND_10_o_AND_11_o'
+  Clock period: 1.151ns (frequency: 868.621MHz)
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Delay:               1.151ns (Levels of Logic = 0)
+  Source:            Receiver/tmp_tx_6 (LATCH)
+  Destination:       Receiver/tmp_tx_7 (LATCH)
+  Source Clock:      Receiver/rst_GND_10_o_AND_11_o falling
+  Destination Clock: Receiver/rst_GND_10_o_AND_11_o falling
+
+  Data Path: Receiver/tmp_tx_6 to Receiver/tmp_tx_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.498   0.616  Receiver/tmp_tx_6 (Receiver/tmp_tx_6)
+     LD:D                      0.037          Receiver/tmp_tx_7
+    ----------------------------------------
+    Total                      1.151ns (0.535ns logic, 0.616ns route)
+                                       (46.5% logic, 53.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Receiver/sampling_count[4]_PWR_11_o_equal_18_o'
+  Clock period: 2.002ns (frequency: 499.401MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               2.002ns (Levels of Logic = 1)
+  Source:            Receiver/rx_bit_count_0 (LATCH)
+  Destination:       Receiver/rx_bit_count_0 (LATCH)
+  Source Clock:      Receiver/sampling_count[4]_PWR_11_o_equal_18_o falling
+  Destination Clock: Receiver/sampling_count[4]_PWR_11_o_equal_18_o falling
+
+  Data Path: Receiver/rx_bit_count_0 to Receiver/rx_bit_count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              4   0.498   0.683  Receiver/rx_bit_count_0 (Receiver/rx_bit_count_0)
+     INV:I->O              1   0.206   0.579  Receiver/Madd_rx_bit_count[3]_GND_10_o_add_18_OUT_xor<0>11_INV_0 (Receiver/rx_bit_count[3]_GND_10_o_add_18_OUT<0>)
+     LDC:D                     0.037          Receiver/rx_bit_count_0
+    ----------------------------------------
+    Total                      2.002ns (0.741ns logic, 1.261ns route)
+                                       (37.0% logic, 63.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST'
+  Clock period: 2.547ns (frequency: 392.642MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               2.547ns (Levels of Logic = 1)
+  Source:            Receiver/RPS (LATCH)
+  Destination:       Receiver/RNS (LATCH)
+  Source Clock:      RST rising
+  Destination Clock: RST rising
+
+  Data Path: Receiver/RPS to Receiver/RNS
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             5   0.498   0.943  Receiver/RPS (Receiver/RPS)
+     LUT5:I2->O            1   0.205   0.579  Receiver/Mmux_sampling_count[4]_sampling_count[4]_MUX_121_o11 (Receiver/sampling_count[4]_sampling_count[4]_MUX_121_o)
+     LDE_1:GE                  0.322          Receiver/RNS
+    ----------------------------------------
+    Total                      2.547ns (1.025ns logic, 1.522ns route)
+                                       (40.2% logic, 59.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock1/baud'
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Offset:              2.586ns (Levels of Logic = 2)
+  Source:            TX_DATA_VALID (PAD)
+  Destination:       Transmitter/debouncer/count1_1 (FF)
+  Destination Clock: clock1/baud rising
+
+  Data Path: TX_DATA_VALID to Transmitter/debouncer/count1_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.222   1.059  TX_DATA_VALID_IBUF (TX_DATA_VALID_IBUF)
+     LUT5:I0->O            1   0.203   0.000  Transmitter/debouncer/Mmux_SWITCH_PRES[1]_X_9_o_wide_mux_10_OUT11 (Transmitter/debouncer/SWITCH_PRES[1]_X_9_o_wide_mux_10_OUT<0>)
+     FD:D                      0.102          Transmitter/debouncer/count1_0
+    ----------------------------------------
+    Total                      2.586ns (1.527ns logic, 1.059ns route)
+                                       (59.0% logic, 41.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SYS_CLK'
+  Total number of paths / destination ports: 29 / 19
+-------------------------------------------------------------------------
+Offset:              4.925ns (Levels of Logic = 4)
+  Source:            RST (PAD)
+  Destination:       Receiver/sample_4 (FF)
+  Destination Clock: SYS_CLK rising
+
+  Data Path: RST to Receiver/sample_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            23   1.222   1.258  RST_IBUF (RST_IBUF)
+     LUT2:I0->O            1   0.203   0.924  Receiver/_n0100_inv1_rstpot (Receiver/_n0100_inv1_rstpot)
+     LUT6:I1->O            1   0.203   0.808  Receiver/sample_4_dpot (Receiver/sample_4_dpot)
+     LUT4:I1->O            1   0.205   0.000  Receiver/sample_4_rstpot (Receiver/sample_4_rstpot)
+     FD:D                      0.102          Receiver/sample_4
+    ----------------------------------------
+    Total                      4.925ns (1.935ns logic, 2.990ns route)
+                                       (39.3% logic, 60.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Receiver/sampling_count[4]_PWR_11_o_equal_18_o'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.694ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       Receiver/rx_bit_count_3 (LATCH)
+  Destination Clock: Receiver/sampling_count[4]_PWR_11_o_equal_18_o falling
+
+  Data Path: RST to Receiver/rx_bit_count_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            23   1.222   1.154  RST_IBUF (RST_IBUF)
+     LUT2:I1->O            4   0.205   0.683  Receiver/rst_GND_10_o_OR_25_o1 (Receiver/rst_GND_10_o_OR_25_o)
+     LDC:CLR                   0.430          Receiver/rx_bit_count_0
+    ----------------------------------------
+    Total                      3.694ns (1.857ns logic, 1.837ns route)
+                                       (50.3% logic, 49.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Receiver/rst_GND_10_o_AND_36_o'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            Receiver/rx_data_7 (LATCH)
+  Destination:       RX_DATA<7> (PAD)
+  Source Clock:      Receiver/rst_GND_10_o_AND_36_o falling
+
+  Data Path: Receiver/rx_data_7 to RX_DATA<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  Receiver/rx_data_7 (Receiver/rx_data_7)
+     OBUF:I->O                 2.571          RX_DATA_7_OBUF (RX_DATA<7>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock1/baud'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.668ns (Levels of Logic = 1)
+  Source:            Transmitter/out_signal (FF)
+  Destination:       TX (PAD)
+  Source Clock:      clock1/baud rising
+
+  Data Path: Transmitter/out_signal to TX
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.650  Transmitter/out_signal (Transmitter/out_signal)
+     OBUF:I->O                 2.571          TX_OBUF (TX)
+    ----------------------------------------
+    Total                      3.668ns (3.018ns logic, 0.650ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock RST
+----------------------------------------------+---------+---------+---------+---------+
+                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------+---------+---------+---------+---------+
+RST                                           |    2.547|         |         |         |
+Receiver/sampling_count[4]_PWR_11_o_equal_18_o|         |    2.532|         |         |
+SYS_CLK                                       |    3.862|         |         |         |
+----------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Receiver/rst_GND_10_o_AND_11_o
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+Receiver/rst_GND_10_o_AND_11_o|         |         |    1.151|         |
+SYS_CLK                       |         |         |    1.565|         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Receiver/rst_GND_10_o_AND_36_o
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+Receiver/rst_GND_10_o_AND_11_o|         |         |    1.151|         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Receiver/sampling_count[4]_PWR_11_o_equal_18_o
+----------------------------------------------+---------+---------+---------+---------+
+                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------+---------+---------+---------+---------+
+RST                                           |         |         |    2.633|         |
+Receiver/sampling_count[4]_PWR_11_o_equal_18_o|         |         |    2.002|         |
+----------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SYS_CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+SYS_CLK        |    3.651|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock1/baud
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock1/baud    |    2.867|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 35.00 secs
+Total CPU time to Xst completion: 34.90 secs
+ 
+--> 
+
+Total memory usage is 271228 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   46 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
